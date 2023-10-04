@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    --main-bg-color-1: black;
+    --main-bg-color-2: white;
+    --main-bg-color-3:  #86e261;
+    --main-bg-color-4: rgba(33, 49, 63, .95);
+}
+
+body{
+    background-color: #86e261;
+    min-width: 400px;
+}
+
+.Header{
+    background-color:   #1b3039;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.Header__Logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.Header__Image{
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.Header__Image:hover{
+    transform: scale(1.2);
+}
+
+.Header__Nav{
+    list-style: none;
+}
+
+.Header__Links{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.Header__Links:hover,
+.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.Header__Links a{
+    font-size: 700;
+    color: #eceff1; 
+}
+
+.Header__Links a:hover{
+    color: #9CCE88;
+}
+
+.Header__Menu {
+    display:none;
+}
+
+.Header .Header__Button button,
+.Header .Header__Menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: rgba(33, 49, 63, .95);
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.Header .Header__Button button:hover,
+.Header .Header__Menu button:hover{
+    background-color: #e2f1f8;
+    color: #9CCE88;
+    transform: scale(1.1);
+}
+
+
+/*Nav Mobile*/
+
+.Header a{
+    text-decoration: none;  
+}
+
+.Header__Mobile{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.Header__Mobile .Header__Content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.Header__Mobile a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.Header__Mobile a:hover, 
+.Header__Mobile a:focus{
+    color: #9CCE88;
+}
+
+.Header .Header__Mobile .Header__Close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+/* Main */
+
+.Main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 850px;
+}
+.Main__Title{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    color: var(--main-bg-color-4);
+}
+.Main__Text{
+    color: var(--main-bg-color-4);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;   
+    line-height: normal;
+}
+.Main__Image{
+    width: 510px;
+    height: 390px;
+}
+
+/* Footer */
+
+.Footer{
+    display: flex;
+    height: 280px;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #1b3039;
+    color: var(--main-bg-color-2);
+}
+.Footer__Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200px;
+}
+.Footer__Email{
+    text-decoration: none;
+    color: var(--main-bg-color-4);
+}
+.Footer__Icons{
+    list-style: none;    
+}
+.Footer__Icons a{
+    text-decoration: none;
+    color:var(--main-bg-color-2) ;
+    background-color: var(--main-bg-color-4);
+    border-radius: 100%;
+    padding: 4px;
+    margin-right: 5px;
+}
+.Footer__Shortcuts{
+    text-decoration: none;
+    color: var(--main-bg-color-2);
+}
+
+
+
+
+/* media  */
+
+
+/* Medias Querys */
+@media (max-width: 1300px) {
+    
+    /* Main */
+
+    .Main{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .Main__Box{
+        width: 48%;
+    }
+    .Main__Title{
+        font-size: 50px;
+        font-weight: 800;
+    }
+    .Main__Text{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .Main__Image{
+        width: 45%;
+        height: auto;
+    }
+
+    /* Footer */
+
+    .Footer{
+        display: flex;
+        height: 200px;
+        justify-content: space-around;
+    }
+}
+@media (max-width: 920px){
+    
+    /* Header */
+    
+    .Header__Nav, .Header__Button {
+        display: none;
+    }
+    .Header__Menu {
+        display: inherit;
+    }
+
+    /* Main */
+
+    .Main{
+        display: flex;
+        height: 650px;
+        justify-content: center;
+    }
+    .Main__Image{
+        height: auto;
+        width: 48%;
+    }
+    .Main__Title{
+        font-size: 40px;
+    }
+    .Main__Text{
+        font-size: 20px;
+    }
+
+    /* Footer */
+
+    .Footer{
+        display: flex;
+        justify-content: space-around;
+        font-size: 15px;
+    }
+}
+@media (max-width: 600px){
+    
+    /* Header */
+    .Header__Image{
+        height: 70px;
+        width: auto;
+    }
+
+    /* Main */
+    .Main{
+        display: flex;
+        justify-content: center;
+        height: 400px;
+    }
+    .Main__Image{
+        height: auto;
+        width: 40%;
+    }
+
+    .Main__Title{
+        font-size: 25px;
+    }
+    .Main__Text{
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .Footer{
+        font-size: 12px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .Footer__Box li, .Footer__Shortcuts, .Footer__Box h3{
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-height:450px) {
+    .Header__Mobile .Header a{
+        font-size: 20px;
+    }
+    .Header .Header__Close .Header__Close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media (max-width: 400px){
+    /* Header */
+    .Header__Image{
+        height: 70px;
+        width: auto;
+    }
+
+    /* Main */
+    .Main{
+        height: 370px;
+    }
+
+    .Main__Box{
+        width: 48%;
+    }
+    .Main__Title{
+        font-size: 20px;
+    }
+    .Main__Text{
+        font-size: 12px;
+    }
+    
+}
