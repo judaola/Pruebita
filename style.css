@@ -257,7 +257,7 @@ body{
 
     .Main{
         display: flex;
-        height: 650px;
+        /* height: 650px; */
         justify-content: center;
     }
     .Main__Image{
@@ -288,11 +288,11 @@ body{
     }
 
     /* Main */
-    .Main{
+    /* .Main{
         display: flex;
         justify-content: center;
         height: 400px;
-    }
+    } */
     .Main__Image{
         height: auto;
         width: 40%;
@@ -335,9 +335,9 @@ body{
     }
 
     /* Main */
-    .Main{
+    /* .Main{
         height: 370px;
-    }
+    } */
 
     .Main__Box{
         width: 48%;
