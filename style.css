@@ -288,11 +288,9 @@ body{
     }
 
     /* Main */
-    /* .Main{
-        display: flex;
-        justify-content: center;
-        height: 400px;
-    } */
+    .Main{
+        height: 700px;
+    }
     .Main__Image{
         height: auto;
         width: 40%;
