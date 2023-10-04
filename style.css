@@ -8,17 +8,20 @@
     font-size: 20px;
     --main-bg-color-1: black;
     --main-bg-color-2: white;
-    --main-bg-color-3:  #86e261;
-    --main-bg-color-4: rgba(33, 49, 63, .95);
+    --main-bg-color-3:  #86e261; /*Fondo general*/
+    --main-bg-color-4: #21313f; /*Color letra titulo y texto*/
+    --main-bg-color-5: #1b3039; /* Fondo header, fooler */
+    --main-bg-color-6: #eceff1; /*Color letra header, foooler*/
+    --main-bg-color-7: #9CCE88; 
 }
 
 body{
-    background-color: #86e261;
+    background-color: var(--main-bg-color-3);
     min-width: 400px;
 }
 
 .Header{
-    background-color:   #1b3039;
+    background-color:   var(--main-bg-color-5);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -53,40 +56,40 @@ body{
 }
 
 .Header__Links:hover,
-.overlay a:hover{
+.Header__Mobile a:hover{
     transform: scale(1.1);
 }
 
 .Header__Links a{
-    font-size: 700;
-    color: #eceff1; 
+    font-size: 20px;
+    color: var(--main-bg-color-6); 
 }
 
 .Header__Links a:hover{
-    color: #9CCE88;
+    color: var(--main-bg-color-7);
 }
 
 .Header__Menu {
     display:none;
 }
 
-.Header .Header__Button button,
-.Header .Header__Menu button{
+.Header__Button button,
+.Header__Menu button{
     margin-left: 20px;
-    font-weight: 700;
-    color: rgba(33, 49, 63, .95);
+    font-weight: 20px;
+    color: var(--main-bg-color-5);
     padding: 9px 25px;
-    background: #eceff1;
+    background: var(--main-bg-color-6);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
-.Header .Header__Button button:hover,
-.Header .Header__Menu button:hover{
-    background-color: #e2f1f8;
-    color: #9CCE88;
+.Header__Button button:hover,
+.Header__Menu button:hover{
+    background-color: var(--main-bg-color-6);
+    color: var(--main-bg-color-7);
     transform: scale(1.1);
 }
 
@@ -104,7 +107,7 @@ body{
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: rgba(33, 49, 63, .95);
+    background-color: var(--main-bg-color-4);
     overflow: hidden;
     transition: all 0.3s ease 0s;
 }
@@ -123,12 +126,12 @@ body{
     display: block;
     transition: all 0.3s ease 0s;
     font-weight: 700;
-    color: #eceff1;
+    color: var(--main-bg-color-6);
 }
 
 .Header__Mobile a:hover, 
 .Header__Mobile a:focus{
-    color: #9CCE88;
+    color: var(--main-bg-color-6);
 }
 
 .Header .Header__Mobile .Header__Close{
@@ -173,8 +176,8 @@ body{
     height: 280px;
     justify-content: space-evenly;
     align-items: center;
-    background: #1b3039;
-    color: var(--main-bg-color-2);
+    background: var(--main-bg-color-5);
+    color: var(--main-bg-color-6);
 }
 .Footer__Box{
     display: flex;
@@ -182,24 +185,27 @@ body{
     justify-content: space-evenly;
     height: 200px;
 }
+.Footer__Box li a{
+    text-decoration: none;
+    color: var(--main-bg-color-6);
+}
 .Footer__Email{
     text-decoration: none;
-    color: var(--main-bg-color-4);
+    color: var(--main-bg-color-6);
 }
 .Footer__Icons{
     list-style: none;    
 }
 .Footer__Icons a{
     text-decoration: none;
-    color:var(--main-bg-color-2) ;
-    background-color: var(--main-bg-color-4);
+    color:var(--main-bg-color-6) ;
     border-radius: 100%;
     padding: 4px;
     margin-right: 5px;
 }
 .Footer__Shortcuts{
     text-decoration: none;
-    color: var(--main-bg-color-2);
+    color: var(--main-bg-color-6);
 }
 
 
@@ -333,9 +339,6 @@ body{
     }
 
     /* Main */
-    /* .Main{
-        height: 370px;
-    } */
 
     .Main__Box{
         width: 48%;
